@@ -1,0 +1,22 @@
+let arr = [6, 5, 3, 1, 8, 7, 2, 4]
+
+function insertionSort(arr) {
+    let sec = 1
+    
+    while(sec < arr.length) {
+        let first = sec - 1
+        let key = arr[sec]
+        
+        while(first >= 0 && arr[first] > key) {
+            arr[first + 1] = arr[first]
+            first--
+        }
+        
+        arr[first + 1] = key
+        console.log(JSON.stringify(arr))
+        sec++
+    }
+    return arr
+}
+
+console.log(insertionSort(arr))
